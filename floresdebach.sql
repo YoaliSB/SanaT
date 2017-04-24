@@ -1,6 +1,6 @@
 CREATE DATABASE  IF NOT EXISTS `floresdebach` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `floresdebach`;
--- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: floresdebach
 -- ------------------------------------------------------
@@ -17,7 +17,7 @@ USE `floresdebach`;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-GRANT  SELECT,ALTER,UPDATE,INSERT,LOCK TABLES ON floresdebach.* TO 'usuario'@'localhost' IDENTIFIED BY 'mipass';
+GRANT  SELECT,UPDATE,INSERT ON floresdebach.* TO 'usuario'@'localhost' IDENTIFIED BY 'mipass';
 
 --
 -- Table structure for table `cuestionario`
@@ -56,7 +56,7 @@ CREATE TABLE `flor` (
   `NombreFlor` varchar(20) NOT NULL,
   `DescripcionFlor` varchar(2000) NOT NULL,
   PRIMARY KEY (`IDFlor`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -108,7 +108,7 @@ CREATE TABLE `paciente` (
   `NombrePaciente` varchar(60) NOT NULL,
   `Sexo` varchar(10) NOT NULL,
   `Mail` varchar(60) NOT NULL,
-  `Telefono` varchar(10) NOT NULL,
+  `Telefono` varchar(13) NOT NULL,
   `Direccion` varchar(100) NOT NULL,
   `Edad` int(11) NOT NULL,
   `DescripcionPaciente` varchar(1000) DEFAULT NULL,
@@ -116,7 +116,7 @@ CREATE TABLE `paciente` (
   PRIMARY KEY (`IDPaciente`),
   KEY `IDTerapeuta` (`IDTerapeuta`),
   CONSTRAINT `paciente_ibfk_1` FOREIGN KEY (`IDTerapeuta`) REFERENCES `terapeuta` (`IDTerapeuta`) ON DELETE SET NULL ON UPDATE SET NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,6 +125,7 @@ CREATE TABLE `paciente` (
 
 LOCK TABLES `paciente` WRITE;
 /*!40000 ALTER TABLE `paciente` DISABLE KEYS */;
+INSERT INTO `paciente` VALUES (1,'Pedroza','M','mail@mail.com','56','Aqui',36,NULL,1),(2,'Luis','M','mail@mail.com','56','Aqui',35,NULL,3),(3,'Luis','M','mail@mail.com','57','Aca',45,NULL,3),(4,'Jose Lopez Perez','M','mail@mail.com','45','Aca',14,NULL,4),(5,'Pedro Jimenez Lopez','M','mail@mail.com','44','Aqui',44,NULL,4),(6,'Hernan Hurtado','M','mail@mail.com','44','Aqui',12,NULL,3);
 /*!40000 ALTER TABLE `paciente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -248,8 +249,10 @@ DROP TABLE IF EXISTS `terapeuta`;
 CREATE TABLE `terapeuta` (
   `IDTerapeuta` int(11) NOT NULL AUTO_INCREMENT,
   `NombreTerapeuta` varchar(60) NOT NULL,
+  `Login` varchar(20) NOT NULL,
+  `Pass` varchar(20) NOT NULL,
   PRIMARY KEY (`IDTerapeuta`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -258,6 +261,7 @@ CREATE TABLE `terapeuta` (
 
 LOCK TABLES `terapeuta` WRITE;
 /*!40000 ALTER TABLE `terapeuta` DISABLE KEYS */;
+INSERT INTO `terapeuta` VALUES (1,'admin','admin','adminSanaT'),(3,'Pedro Jimenez Lopez','plopez','pass'),(4,'Jose Lopez Perez','jlopez','pass');
 /*!40000 ALTER TABLE `terapeuta` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -270,4 +274,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-22 14:33:44
+-- Dump completed on 2017-04-24 11:41:43
