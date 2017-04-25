@@ -107,7 +107,7 @@ CREATE TABLE `paciente` (
   `NombrePaciente` varchar(60) NOT NULL,
   `Sexo` varchar(10) NOT NULL,
   `Mail` varchar(60) NOT NULL,
-  `Telefono` varchar(10) NOT NULL,
+  `Telefono` varchar(13) NOT NULL,
   `Direccion` varchar(100) NOT NULL,
   `Edad` int(11) NOT NULL,
   `DescripcionPaciente` varchar(1000) DEFAULT NULL,
