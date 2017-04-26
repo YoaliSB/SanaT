@@ -16,29 +16,29 @@
             <div class="row">
                 <div class="large-4 medium-4 columns">
                     <label>Nombre</label>
-                    <input name="nombre" type="text">
+                    <input required name="nombre" type="text">
                 </div>
                 <div class="large-4 medium-4 columns">
                     <label>Edad</label>
-                    <input name="edad" type="text">
+                    <input required name="edad" type="text">
                 </div>
                 <div class="large-4 medium-4 columns">
                     <label>Sexo</label>
-                    <input name="sexo" type="text">
+                    <input required name="sexo" type="text">
                 </div>
             </div>
             <div class="row">
                 <div class="large-4 medium-4 columns">
                     <label>Direccion</label>
-                    <input name="direccion" type="text">
+                    <input required name="direccion" type="text">
                 </div>
                 <div class="large-4 medium-4 columns">
                     <label>Telefono</label>
-                    <input name="telefono" type="text">
+                    <input required name="telefono" type="text">
                 </div>
                 <div class="large-4 medium-4 columns">
                     <label>Mail</label>
-                    <input name="mail" type="text">
+                    <input required name="mail" type="text">
                 </div>
                 <div class="large-4 medium-4 columns">
                     <input type="hidden" value="${requestScope.idTerapeuta}" name="idTerapeuta"/>
