@@ -16,22 +16,22 @@
             <div class="row">
                 <div class="large-6 medium-6 columns">
                     <label>Nombre</label>
-                    <input name="nombre" type="text">
+                    <input required name="nombre" type="text">
                 </div>
                 <div class="large-6 medium-6 columns">
                     <label>Edad</label>
-                    <input name="edad" type="text">
+                    <input required name="edad" type="text">
                 </div>
 
             </div>
             <div class="row">
             	<div class="large-6 medium-6 columns">
             		<label>Username</label>
-            		<input name="user" type="text">
+            		<input required name="user" type="text">
             	</div>
             	<div class="large-6 medium-6 columns">
             		<label>Password</label>
-            		<input id="password" placeholder="Password" name="password" type="password">
+            		<input required id="password" placeholder="Password" name="password" type="password">
             	</div>
             	<div class="large-6 medium-6 columns">
 				    <input style="align-content:center" class="button" type="submit" name="submit" value="Agregar Terapeuta" />
