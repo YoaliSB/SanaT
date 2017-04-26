@@ -41,6 +41,7 @@
                     <input name="mail" type="text">
                 </div>
                 <div class="large-4 medium-4 columns">
+                    <input type="hidden" value="${requestScope.idTerapeuta}" name="idTerapeuta"/>
                     <input style="align-content:center" class="button" type="submit" name="submit" value="Agregar Paciente" />
                 </div>
             </div>

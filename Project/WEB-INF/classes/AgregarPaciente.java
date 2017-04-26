@@ -34,7 +34,7 @@ public class AgregarPaciente extends HttpServlet{
 			String direccion = request.getParameter("direccion");
 			String telefono = request.getParameter("telefono");
 			String mail = request.getParameter("mail");
-			int IDTerapeuta = Integer.parseInt(request.getSession().getAttribute("id").toString());
+			int IDTerapeuta = Integer.parseInt(request.getParameter("idTerapeuta"));
 			
 			
 			if(!nombre.equals("")){
