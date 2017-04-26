@@ -4,42 +4,35 @@
         <title></title>
         <link rel="stylesheet" href="css/foundation.css">
         <link rel="stylesheet" href="css/app.css">
+        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
     </head>
     <body>
-        <h1 style="text-align:center">SanaT</h1>
-        <div class="primary callout ">
-            <form action="Login" method="post">
+       <div class="wrapper">
+        <img id="logo" src="media/sanaTLogo.png">
+        <div class="container">
+            <form class="form" action="Login" method="post">
                 <div class="row ">
-                    <div class="large-4 medium-4 columns"><label style="font-size:1px">A</label></div>
-                    <div align="center" class="large-4 medium-4 columns">
-                        <label>Usuario</label>
-                        <input name="user" type="text" placeholder="Username" />
+                    <div align="center" class="large-4 medium-4 columns login username">
+                        <input name="user" type="text" placeholder="Usuario" />
                     </div>
-                    <div class="large-4 medium-4 columns"><label style="font-size:1px">A</label></div>
                 </div>
                 <div class="row">
-                    <div class="large-4 medium-4 columns"><label style="font-size:1px">A</label></div>
-                    <div align="center" class="large-4 medium-4 columns">
-                        <label>Contrase√±a</label>
-                        <input id="password" placeholder="Password" name="password" type="password">
+                    <div align="center" class="large-4 medium-4 columns login">
+                        <input id="password" placeholder="ContraseÒa" name="password" type="password">
                     </div>
-                    <div class="large-4 medium-4 columns"><label style="font-size:1px">A</label></div>
                 </div>
                 <div class="row">
-                    <div class="large-4 medium-4 columns"><label style="font-size:1px">A</label></div>
-                    <div align="center" class="large-4 medium-4 columns">
-                        <input class="button" type="submit" name="submit" value="Iniciar sesion" />
+                    <div align="center" class="large-4 medium-4 columns login last">
+                        <input class="button" type="submit" name="submit" value="Iniciar sesiÛn" />
                     </div>
-                    <div  class="large-4 medium-4 columns"><label style="font-size:1px">A</label></div>
                 </div>
                 <div class="row">
-                	<div class="large-4 medium-4 columns"><label style="font-size:1px">A</label></div>
-                	<div align="center" class="large-4 medium-4 columns">
-						<label style="color:red">${requestScope.logged}</label>
+                	<div align="center" class="large-4 medium-4 columns alert">
+			   <label style="color:red">${requestScope.logged}</label>
                     </div>
-                	<div class="large-4 medium-4 columns"><label style="font-size:1px">A</label></div>
                 </div>
             </form>
         </div>
+    </div>
 </body>
 </html>
