@@ -35,7 +35,7 @@ try{
 			
 			ResultSet resultSet=stat.executeQuery(sql);
 			
-			
+			request.setAttribute("id", id);
 			
 			while (resultSet.next()) {
 
@@ -50,6 +50,7 @@ try{
 			}
 			stat.close();
 			con.close();
+	
 
 			RequestDispatcher disp =  getServletContext().getRequestDispatcher("/descripPaciente.jsp");
 

@@ -43,7 +43,7 @@
             <div class="row">
                 <div class="large-4 medium-4 columns">
                     <label>Nombre</label>
-                    <input name="nombre" type="text">
+                    <input required name="nombre" type="text">
                 </div>
                 <div class="large-4 medium-4 columns">
                     <label>Edad</label>
@@ -96,7 +96,7 @@
         </form>
         <h4 style="text-align:center">Contestar cuestionarios</h4>
         <form  target="_blank" style="text-align:center" action="./Cuest" method="post">
-        	<input type="hidden" name="id" value="${al.getIDPaciente()}"/><label></label>
+        	<input type="hidden" name="id" value="${requestScope.id}"/><label></label>
 			<input class="success button" type="submit" value="1" name="test" />
 			<input class="success button" type="submit" value="2" name="test" />
 			<input class="success button" type="submit" value="3" name="test" />
