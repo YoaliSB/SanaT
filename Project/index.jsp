@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="large-4 medium-4 columns"><label style="font-size:1px">A</label></div>
                     <div align="center" class="large-4 medium-4 columns">
-                        <label>Contraseña</label>
+                        <label>ContraseÃ±a</label>
                         <input id="password" placeholder="Password" name="password" type="password">
                     </div>
                     <div class="large-4 medium-4 columns"><label style="font-size:1px">A</label></div>

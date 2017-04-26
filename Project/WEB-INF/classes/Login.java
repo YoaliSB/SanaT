@@ -85,8 +85,8 @@ public class Login extends HttpServlet {
 						pacientes.add(aux);
 
 					}
-					request.getSession().setAttribute("id", loggedid);
-					request.getSession().setAttribute("terapeuta", nomter);
+					request.setAttribute("idTerapeuta", loggedid);
+					request.setAttribute("terapeuta", nomter);
 					request.setAttribute("pacientes", pacientes);
 					disp = getServletContext().getRequestDispatcher("/terapeuta.jsp");
 				} else {

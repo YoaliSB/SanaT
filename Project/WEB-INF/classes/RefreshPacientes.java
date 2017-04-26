@@ -9,8 +9,8 @@ import java.util.Vector;
 
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet("/AgregarPaciente")
-public class AgregarPaciente extends HttpServlet{
+@WebServlet("/RefreshPacientes")
+public class RefreshPacientes extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response){
 
 		try{
@@ -28,23 +28,7 @@ public class AgregarPaciente extends HttpServlet{
 			
 
 			Statement stat = con.createStatement();
-			String nombre = request.getParameter("nombre");
-			String edad = request.getParameter("edad");
-			String sexo = request.getParameter("sexo");
-			String direccion = request.getParameter("direccion");
-			String telefono = request.getParameter("telefono");
-			String mail = request.getParameter("mail");
 			int IDTerapeuta = Integer.parseInt(request.getParameter("idTerapeuta"));
-			
-			
-			if(!nombre.equals("")){
-				String sql = "INSERT INTO paciente(NombrePaciente,Edad,Sexo,Direccion,Telefono,Mail,IDTerapeuta) VALUES('"+nombre+"','"+edad+"','"+sexo+"','"+direccion+"','"+telefono+"','"+mail+"','"+IDTerapeuta+"');";
-				stat.executeUpdate(sql);
-			}
-						
-			stat.close();
-			
-			stat = con.createStatement();
 			
 			ResultSet resultSet=stat.executeQuery("SELECT * FROM paciente WHERE IDTerapeuta="+IDTerapeuta);
 			Vector<Paciente> pacientes = new Vector<Paciente>();
@@ -67,7 +51,6 @@ public class AgregarPaciente extends HttpServlet{
 			stat.close();
 			con.close();
 			request.setAttribute("pacientes",pacientes);
-			System.out.println("ID: "+IDTerapeuta);
 			request.setAttribute("idTerapeuta", IDTerapeuta);
 
 			RequestDispatcher disp =  getServletContext().getRequestDispatcher("/terapeuta.jsp");
