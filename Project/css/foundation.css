@@ -1578,7 +1578,7 @@ kbd {
   border: 1px solid transparent;
   border-radius: 0;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1;
   text-align: center;
   cursor: pointer;
@@ -1587,7 +1587,7 @@ kbd {
   [data-whatinput='mouse'] .button {
     outline: 0; }
   .button:hover, .button:focus {
-    background-color: #14679e;
+    background-color: mediumturquoise;
     color: #fefefe; }
   .button.tiny {
     font-size: 0.6rem; }
@@ -1783,7 +1783,7 @@ textarea[readonly] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  border-radius: 0; }
+  border-radius: 8px; }
 
 input[type='search'] {
   box-sizing: border-box; }
@@ -1814,10 +1814,10 @@ label > [type='radio'] {
 label {
   display: block;
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 1.2rem;
   font-weight: normal;
   line-height: 1.8;
-  color: #0a0a0a; }
+  color: #525252; }
   label.middle {
     margin: 0 0 1rem;
     padding: 0.5625rem 0; }
@@ -2226,7 +2226,6 @@ select {
   .callout > :last-child {
     margin-bottom: 0; }
   .callout.primary {
-    background-color: #d7ecfa;
     color: #0a0a0a; }
   .callout.secondary {
     background-color: #eaeaea;
