@@ -17,7 +17,7 @@ USE `floresdebach`;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-GRANT  SELECT,ALTER,UPDATE,INSERT,LOCK TABLES ON floresdebach.* TO 'usuario'@'localhost' IDENTIFIED BY 'mipass';
+GRANT  SELECT,DELETE,ALTER,UPDATE,INSERT,LOCK TABLES ON floresdebach.* TO 'usuario'@'localhost' IDENTIFIED BY 'mipass';
 --
 -- Table structure for table `cuestionario`
 --

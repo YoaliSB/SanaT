@@ -5,16 +5,16 @@
 
 <html>
 <head>
-		<title>Cuestionario 1</title>
+		<title>Cuestionario </title>
         <link rel="stylesheet" href="css/foundation.css">
         <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+<form action="./FinCuest" method="post">
 Paciente ${requestScope.id}
-<c:if test="${requestScope.completed}">
-			terapeuta agregado :)
-</c:if>
-
+Cuestionario ${requestScope.test}
+<input type="hidden" name="idpa" value="${requestScope.id}"/>
+<input type="hidden" name="num" value="${requestScope.test}"/>
 <table border="1">
     <tr>
         <th>#</th>
@@ -30,44 +30,32 @@ Paciente ${requestScope.id}
             <c:out value="${p.getDescripcionPregunta()}" />
             <br />
         </td>
-            <c:forEach items="${requestScope.respuestas}" var="r">
-                <c:set var="pre" scope="session" value="${p.getIDPregunta()}"/>
-                <c:set var="res" scope="session" value="${r.getIDPregunta()}"/>
-                <c:if test="${pre eq res}">
-                    <td>
-                        <c:choose>
-                            <c:when test="${pre >131}">
-                                <c:choose>
-                                    <c:when test="${r.descripcionRespuesta eq 'Pregunta Abierta'}">
-                                        <c:if test="${pre<142}">
-                                            <input type="text" id="shortAnswer" name=<c:out value="${r.getIDPregunta()}"/>>
-                                        </c:if>
-                                        <c:if test="${pre>142}">
-                                            <input type="text" id="bigAnswer" name=<c:out value="${r.getIDPregunta()}"/>>
-                                        </c:if>
-                                    </c:when>
-                                    <c:when test="${pre eq 148 or pre eq 152 }">
-                                        <input type="checkbox" name=<c:out value="${r.getIDPregunta()}"/> value=<c:out value="${r.getIDRespuesta()}"/>><c:out value="${r.descripcionRespuesta}"/>
-                                    </c:when>
-                                    <c:otherwise>
-                                         <input type="radio" name=<c:out value="${r.getIDPregunta()}"/> value=<c:out value="${r.getIDRespuesta()}"/>><c:out value="${r.descripcionRespuesta}"/>
-                                    </c:otherwise>
-                                </c:choose>
-                            </c:when>
-                            <c:otherwise>
-                                 <input type="radio" name=<c:out value="${r.getIDPregunta()}"/> value=<c:out value="${r.getIDRespuesta()}"/>><c:out value="${r.descripcionRespuesta}"/>
-                            </c:otherwise>
-                        </c:choose>
+            <c:choose>
+                <c:when test="${requestScope.contestado}">
+                     <td>
+                        <c:forEach items="${requestScope.respuestas}" var="r">
+                            <c:if test="${r.getIDPregunta() eq p.getIDPregunta()}">
+                                 <p><c:out value="${r.descripcionRespuesta}"/></p>
+                                 <input type="hidden" name=<c:out value="${p.getIDPregunta()}"/> value=<c:out value="${r.getIDRespuesta()}"/>>
+                            </c:if>
+                       </c:forEach>     
                     </td>
-                </c:if>
-            </c:forEach>
+                </c:when>
+                <c:otherwise>
+                    <c:forEach items="${requestScope.respuestas}" var="r">
+                    <td>
+                         <input type="radio" required name=<c:out value="${p.getIDPregunta()}"/> value=<c:out value="${r.getIDRespuesta()}"/>><c:out value="${r.descripcionRespuesta}"/>
+                           
+                    </td>
+                    </c:forEach>
+                </c:otherwise>
+            </c:choose>
     </tr>
 
     </c:forEach>
 </table>
 <br />
-<form action="AgregarPaciente" method="post">
-	<input class="button" type="submit" name="submit" value="Regresar" />
+	<input class="button" type="submit" name="submit" value="Enviar" />
 </form>
 </body>
 </html>
