@@ -4,7 +4,14 @@ public class Flor {
 	private int IDFlor;
 	private String NombreFlor;
 	private String DescripcionFlor;
+	private int cont;
 	
+	public int getCont() {
+		return cont;
+	}
+	public void setCont(int cont) {
+		this.cont = cont;
+	}
 	public int getIDFlor() {
 		return IDFlor;
 	}
@@ -23,4 +30,5 @@ public class Flor {
 	public void setDescripcionFlor(String descripcionFlor) {
 		DescripcionFlor = descripcionFlor;
 	}
+
 }
