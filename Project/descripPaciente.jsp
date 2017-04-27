@@ -35,6 +35,10 @@
                 <td>Mail</td>
                 <td>${requestScope.mail}</td>
             </tr>
+            <tr>
+                <td>Comentarios</td>
+                <td>${requestScope.comentario}</td>
+            </tr>
         </table>
         <br/>
         <h4 style="text-align:center">Editar Paciente</h4>
@@ -72,6 +76,18 @@
                 <div class="large-4 medium-4 columns">
                     <label style="font-size:1px">A</label>
                 </div>
+                <div class="large-4 medium-4 columns"><label style="text-align:center">Comentar</label></div>
+                <div class="large-4 medium-4 columns">
+                    <label style="font-size:1px">A</label>
+                </div>
+            </div>
+            <div class="row">
+                <textarea type="text" cols="140" rows="5" style="" name="comentarios" placeholder="Comentarios"></textarea>
+            </div>
+            <div class="row">
+                <div class="large-4 medium-4 columns">
+                    <label style="font-size:1px">A</label>
+                </div>
                 <div align="center" class="large-4 medium-4 columns">
                     <input style="align-content:center" class="button" type="submit" name="submit" value="Editar" />
                 </div>
@@ -79,6 +95,7 @@
                     <label style="font-size:1px">A</label>
                 </div>
             </div>
+            
         </form>
         <form action="EliminarPaciente" method="post">
             <div class="row">

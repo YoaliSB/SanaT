@@ -32,25 +32,30 @@ public class EditarPaciente extends HttpServlet{
 			String direccion = request.getParameter("direccion");
 			String telefono = request.getParameter("telefono");
 			String mail = request.getParameter("mail");
+			String comentario = request.getParameter("comentarios");
 			int id = Integer.parseInt(request.getParameter("id").toString());
 			
 			String sql="";
 			if(nombre!="")sql+="NombrePaciente = '"+nombre+"'";
-			if(sql!=""&&edad!=""&&sexo!=""&&direccion!=""&&telefono!=""&&mail!="")sql+=",";
+			if(sql!=""&&edad!=""&&sexo!=""&&direccion!=""&&telefono!=""&&mail!=""&&comentario!="")sql+=",";
 			if(edad!="")sql+="Edad= '"+edad+"'";
-			if(sql!=""&&sexo!=""&&direccion!=""&&telefono!=""&&mail!="")sql+=",";
+			if(sql!=""&&sexo!=""&&direccion!=""&&telefono!=""&&mail!=""&&comentario!="")sql+=",";
 			if(sexo!="")sql+="Sexo= '"+sexo+"'";
-			if(sql!=""&&direccion!=""&&telefono!=""&&mail!="")sql+=",";
+			if(sql!=""&&direccion!=""&&telefono!=""&&mail!=""&&comentario!="")sql+=",";
 			if(direccion!="")sql+="Direccion= '"+direccion+"'";
-			if(sql!=""&&telefono!=""&&mail!="")sql+=",";
+			if(sql!=""&&telefono!=""&&mail!=""&&comentario!="")sql+=",";
 			if(telefono!="")sql+="Telefono= '"+telefono+"'";
-			if(sql!=""&&mail!="")sql+=",";
+			if(sql!=""&&mail!=""&&comentario!="")sql+=",";
 			if(mail!="")sql+="Mail= '"+mail+"'";
+			if(sql!=""&&comentario!="")sql+=",";
+			if(comentario!="")sql+="DescripcionPaciente = '"+comentario+"'";
 			sql+=" WHERE IDPaciente="+id+";";
 			System.out.println(sql);
 			
 			
-			stat.executeUpdate("UPDATE paciente SET "+sql);			
+			if(sql!=""){
+				stat.executeUpdate("UPDATE paciente SET "+sql);		
+			}	
 			
 			
 			
@@ -67,7 +72,8 @@ public class EditarPaciente extends HttpServlet{
 				request.setAttribute("sexo",resultSet.getString("Sexo"));
 				request.setAttribute("direccion",resultSet.getString("Direccion"));
 				request.setAttribute("telefono",resultSet.getString("Telefono"));
-				request.setAttribute("mail",resultSet.getString("Mail"));					
+				request.setAttribute("mail",resultSet.getString("Mail"));	
+				request.setAttribute("comentario",resultSet.getString("DescripcionPaciente"));				
 				
 			}
 			stat.close();
