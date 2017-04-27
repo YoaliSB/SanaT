@@ -103,6 +103,13 @@
         </form>
         
         <h4 style="text-align:center">Recetas</h4>
+        <h5 style="text-align:center">Analizar cuestionarios</h5>
+        <form  target="_blank" style="text-align:center" action="./Conteo" method="post">
+        	<input type="hidden" name="id" value="${requestScope.id}"/><label></label>
+			<input class="success button" type="submit" value="1" name="test" />
+			<input class="success button" type="submit" value="2" name="test" />
+			<input class="success button" type="submit" value="3" name="test" />
+        </form>
         
     </body>
 </html>

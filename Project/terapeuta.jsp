@@ -17,14 +17,15 @@
             <br />
             <h4 style="text-align:center">Agregar Paciente</h4>
             <form class="add_form" action="AgregarPaciente" method="post">
+                <input type="hidden" value="${requestScope.idTerapeuta}" name="idTerapeuta"/>
                 <div class="field">
-                    <input name="nombre" type="text" placeholder="Nombre Completo">
+                    <input required name="nombre" type="text" placeholder="Nombre Completo">
                 </div>
                 <div class="field">
-                    <input name="edad" type="number" placeholder="Edad">
+                    <input required name="edad" type="number" placeholder="Edad">
                 </div>
                 <div class="field">
-                    <select class="select" name="sexo" required> 
+                    <select required class="select" name="sexo" required> 
                         <option value="" disabled selected hidden>Sexo</option>
                         <option>Hombre</option>
                         <option>Mujer</option>
@@ -37,7 +38,7 @@
                     <input name="telefono" type="text" placeholder="Teléfono">
                 </div>
                 <div class="field">
-                    <input name="mail" type="text" placeholder="Mail: mail@mail.com">
+                    <input required name="mail" type="text" placeholder="Mail: mail@mail.com">
                 </div>
                 <div class="field">
                     <input style="align-content:center" class="button add_button" type="submit" name="submit" value="Agregar Paciente" />
