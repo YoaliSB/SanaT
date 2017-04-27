@@ -15,7 +15,11 @@
             <img src="media/sanaTLogo.png" class="logo">
             <h2 class="header2">Bienvenido, ${requestScope.terapeuta}</h2>
             <br />
+            <form action="MostrarFlores" method="post" target="_blank">
+                <input style="align-content:center" class="button add_button" type="submit" name="submit" value="Ver flores" />
+            </form>
             <h4 style="text-align:center">Agregar Paciente</h4>
+            
             <form class="add_form" action="AgregarPaciente" method="post">
                 <input type="hidden" value="${requestScope.idTerapeuta}" name="idTerapeuta"/>
                 <div class="field">
@@ -32,10 +36,10 @@
                     </select>
                 </div>
                 <div class="field">
-                    <input name="direccion" type="text" placeholder="Dirección">
+                    <input name="direccion" type="text" placeholder="Direcci&oacute;n">
                 </div>
                 <div class="field">
-                    <input name="telefono" type="text" placeholder="Teléfono">
+                    <input name="telefono" type="text" placeholder="Tel&eacute;fono">
                 </div>
                 <div class="field">
                     <input required name="mail" type="text" placeholder="Mail: mail@mail.com">
@@ -48,7 +52,7 @@
             <form class="form-pacientes" action="RefreshPacientes" method="post">
                 <input type="hidden" value="${requestScope.terapeuta}" name="nombreTerapeuta"/>
                 <input type="hidden" value="${requestScope.idTerapeuta}" name="idTerapeuta"/>
-                <button class="refresh" name="refrescar" value="refrescar" type="submit"></button>
+                <input class="succes button" name="refrescar" value="refrescar" type="submit">
             </form>
             <table class="table pacientes" border="1">
                 <tr>
