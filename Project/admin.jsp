@@ -27,10 +27,10 @@
                 		<input id="username" placeholder="Usuario" name="user" type="text" required>
                 	</div>
                 	<div class="field">
-                		<input id="password" placeholder="Contraseña" name="password" type="password" required>
+                		<input id="password" placeholder="Password" name="password" type="password" required>
                 	</div>
                 	<div class="field">
-			 	    <input style="align-content:center" class="button add_button" type="submit" name="submit" value="Agregar Terapeuta" />
+			 	    <input style="align-content:center" class="button add_button hover-button" type="submit" name="submit" value="Agregar Terapeuta" />
                     </div>
          </form>
          <h4 class="header4">Terapeutas</h4>
