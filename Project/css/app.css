@@ -1,3 +1,17 @@
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+td{
+    text-align: center;
+}
+
 body{
     background-image: url(../media/orchids-1094761_1280.jpg);
     background-size: cover;
@@ -23,6 +37,7 @@ body{
     background-color: rgba(255,255,255,1);
     position: relative;
     width:90%;
+    height: 100%;
     left:5%;
 }
 .form{
@@ -41,6 +56,18 @@ body{
     margin-top: 5%;
     margin-left:2%;
 }
+
+.hover-button:hover{
+    background-color: #03A0A1 !important;
+}
+
+.add_button.agregar{
+    align-content: center;
+    position: relative;
+    display: inline-block;
+    left: 35%;
+}
+
 .field{
     position: relative;
     width:50%;
@@ -86,10 +113,6 @@ body{
     border-radius: 15px;
 }
 
-.button:hover{
-    background-color: mediumturquoise;
-}
-
 .alert{
     position: relative;
     width: 67%;
@@ -114,7 +137,20 @@ body{
     text-align:center; 
     position:relative; 
     margin-bottom:3%; 
-    left:-2%;
+}
+
+.header4.pacientes{
+    width: 30%;
+    display: inline-block;
+    left: 30%;
+    margin-bottom: 10px;
+}
+
+.form-pacientes{
+    width: 30px;
+    position: relative;
+    display: inline-block;
+    left: 24%;   
 }
 
 .table{
@@ -127,3 +163,44 @@ body{
     bottom: 5px;
     padding: 2px;
 }
+
+.table.pacientes{
+    width:70%;
+    left:15%;
+}
+
+.icon{
+    height: 30px;
+    width: 30px;
+    position: relative;
+}
+
+.icon.delete{
+    background-image: url(../media/delete-icon.png);
+    background-size: cover;
+}
+
+.icon.edit{
+    left: 20%;
+    top: -8px;
+}
+
+
+.icon.refresh{
+    background-image: url(../media/refresh-icon.png);
+    background-size: cover;
+    top: 6px;
+    margin-left: -8px;
+}
+.select:disabled { 
+    color:lightgray; 
+}
+
+.paciente_button{
+    border: solid 2px turquoise;
+    background-color: white;
+    line-height: 2;
+    width:60%;
+    border-radius:15px;
+}
+
