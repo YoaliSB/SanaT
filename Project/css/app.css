@@ -1,8 +1,23 @@
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+td{
+    text-align: center;
+}
+
 body{
     background-image: url(../media/orchids-1094761_1280.jpg);
     background-size: cover;
     height:100%;
     width:100%;
+    font-family: 'Oxygen', sans-serif;
 }
 
 .wrapper{
@@ -19,15 +34,29 @@ body{
 }
 
 .wrapper2{
-    font-family: 'Oxygen', sans-serif;
     background-color: rgba(255,255,255,1);
+    position: fixed;
+    width:93%;
+    height: 100vh;
+    left:3.5%;
+    top:0;
+    bottom:0;
+}
+
+.wrapper3{
     position: relative;
-    width:90%;
-    left:5%;
+    width: 90%;
+    left: 5%;
 }
 .form{
     background-color: rgba(255,255,255,0.6);
     border-radius: 30px;
+}
+
+.form-flores{
+    position: relative;
+    display: inline-block;
+    left: 55%;
 }
 
 .add_form{
@@ -41,10 +70,64 @@ body{
     margin-top: 5%;
     margin-left:2%;
 }
+
+.hover-button:hover{
+    background-color: #03A0A1 !important;
+    color: white !important;
+}
+
+.add_button.agregar{
+    align-content: center;
+    position: relative;
+    display: inline-block;
+    left: 35%;
+}
+
+.add_button.flores{
+    position: relative;
+    align-content: center;
+    left: 55%;
+    top: -13vh;
+}
+
+.add_button.terapeutas{
+    left: 31%;
+    margin-top: 5%;
+    margin-left: 4%;
+}
+
+.add_button.editar{
+    left: 41% !important;
+    margin-top:0; 
+}
+
+.hover-button.flores2:hover{
+    background-color: mediumpurple !important;
+    color:white;
+}
+
+.add_button.flores2{
+    line-height: 3px;
+    background-color: #E1A6F0 !important;
+}
+
+.add_button.receta{
+    margin-top:1%;
+    margin-bottom:1%;
+    left:40%;
+}
+
 .field{
     position: relative;
     width:50%;
     left:25%;
+}
+
+.recipe-field{
+    width: 30%;
+    display: inline-block;
+    margin-right: 14px;
+    left: 0;
 }
 
 #logo{
@@ -86,10 +169,6 @@ body{
     border-radius: 15px;
 }
 
-.button:hover{
-    background-color: mediumturquoise;
-}
-
 .alert{
     position: relative;
     width: 67%;
@@ -114,7 +193,29 @@ body{
     text-align:center; 
     position:relative; 
     margin-bottom:3%; 
-    left:-2%;
+}
+
+.header4.pacientes{
+    width: 30%;
+    display: inline-block;
+    left: 23%;
+    margin-bottom: 10px;
+    
+}
+
+.header4.terapeutas{
+    left:60vh;
+    width: 30%;
+    display: inline-block;
+    margin-bottom: 10px;
+    
+}
+
+.form-pacientes{
+    width: 30px;
+    position: relative;
+    display: inline-block;
+    left: 24%;   
 }
 
 .table{
@@ -127,3 +228,122 @@ body{
     bottom: 5px;
     padding: 2px;
 }
+
+.table.pacientes{
+    width:70%;
+    left:15%;
+}
+
+.table.cuestionario{
+    margin-top:2%;
+    border: solid 2px turquoise;
+    border-collapse: collapse;
+    vertical-align: middle !important;
+}
+
+.table.cuestionario tr td{
+    text-align: justify; 
+    border: solid 2px turquoise;
+}
+
+.table.cuestionario th{
+    font-size: 1.2em;
+}
+
+.table.cuestionario tr td:first-child{
+    text-align: center;
+}
+
+.table.cuestionario tr td:nth-child(4), .table.cuestionario tr td:nth-child(3) {
+    width:7vh;
+    text-align: center;
+    
+    
+}
+.table.terapeutas{
+  width:50%;
+  left:25%;  
+}
+
+.table.recetas{
+    width:60%;
+    left:20%;
+}
+.table.recetas tr td:first-child{
+    width: 11%;
+    text-align: initial;
+}
+
+table.data{
+    width: 50%;
+    position: relative;
+    left: 25%;
+    border: solid 2px turquoise;
+    border-collapse: collapse;
+    font-size: 1.1em;  
+    vertical-align:middle;
+    line-height: 2.4em;
+}
+
+table.data2{
+    width:80%;
+    left:10%;
+    margin-bottom:10px;
+}
+
+table.data2 tr td{
+    padding: 0px 6px 0 6px;
+}
+
+table.data2 tr td:nth-child(3){
+    text-align: justify;
+}
+
+table.data td, table.data th{
+        border: solid 2px turquoise;
+    
+}
+
+.paciente_button:hover{
+    background-color: paleturquoise;
+}
+
+.icon{
+    height: 30px;
+    width: 30px;
+    position: relative;
+}
+
+.icon.delete{
+    background-image: url(../media/delete-icon.png);
+    background-size: cover;
+}
+
+
+.icon.edit{
+    background-image: url(../media/edit-icon.png);
+    background-size: cover;
+}
+
+.icon.refresh{
+    background-image: url(../media/refresh-icon.png);
+    background-size: cover;
+    top: 6px;
+    margin-left: -11vh;
+}
+.select:disabled { 
+    color:lightgray; 
+}
+
+.paciente_button{
+    border: solid 2px turquoise;
+    background-color: white;
+    line-height: 2;
+    width:60%;
+    border-radius:15px;
+}
+
+.ok{
+    left:33%;
+}
+

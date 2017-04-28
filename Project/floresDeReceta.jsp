@@ -9,22 +9,24 @@
         <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
     </head>
     <body>
-        <div class="wrapper2">
-            <h2 style="text-align:center">Receta</h2>
-        <table border="1">
+        <div class="wrapper2"></div>
+        <div class="wrapper3">
+            <img src="media/sanaTLogo.png" class="logo">
+            <h2 style="text-align:center" class="header2">Receta</h2>
+        <table border="1" class="data">
             <tr>
                 <th>Flor</th>
                 <th>Cantidad</th>
             </tr>
             <c:forEach items="${requestScope.flores}" var="f">
                 <tr>
-                    <td><p><c:out value="${f.nombreFlor}"/></p></td>
-                    <td><p><c:out value="${f.dosis}"/></p></td>
+                    <td><c:out value="${f.nombreFlor}"/></td>
+                    <td><c:out value="${f.dosis}"/></td>
                 </tr>
             </c:forEach>
         </table>
-        <div class="field">
-            <a style="align-content:center" class="button add_button"  href="javascript:window.open('','_self').close();">Ok.</a>
+        <div class="field ok">
+            <a style="align-content:center" class="button add_button hover-button"  href="javascript:window.open('','_self').close();">Ok</a>
         </div>
       </div>
     </body>

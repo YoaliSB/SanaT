@@ -7,14 +7,19 @@
         <title>Listado de Flores</title>
         <link rel="stylesheet" href="css/foundation.css">
         <link rel="stylesheet" href="css/app.css">
+        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
     </head>
     <body>
-        <h4 style="text-align:center">Lista de Flores</h4>
-        <table border="1">
+        <div class="wrapper2">
+        </div>
+        <div class="wrapper3">
+        <img src="media/sanaTLogo.png" class="logo">
+        <h2 class="header2" style="text-align:center">Lista de Flores</h2>
+        <table border="1" class="data  data2">
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Descripcion</th>
+                <th>Descripci&oacute;n</th>
             </tr>
             <c:forEach items="${requestScope.flores}" var="fl">
                 <tr>
@@ -33,5 +38,6 @@
                 </tr>
             </c:forEach>
         </table>
+        </div>
     </body>
 </html>

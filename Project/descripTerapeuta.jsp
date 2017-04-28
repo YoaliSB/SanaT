@@ -7,18 +7,21 @@
         <title></title>
         <link rel="stylesheet" href="css/foundation.css">
         <link rel="stylesheet" href="css/app.css">
+        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
     </head>
     <body>
-        <h4 style="text-align:center">Editar Terapeuta</h4>
-        <form action="EditarTerapeuta" method="post">
+        <div class="wrapper2">
+        </div>
+        <div class="wrapper3">
+            <img src="media/sanaTLogo.png" class="logo">
+        <h2 style="text-align:center" class="header2">Editar Terapeuta</h2>
+        <form action="EditarTerapeuta" method="post" class="add_form">
             <input type="hidden" value="${requestScope.idTerapeuta}" name="idTerapeuta"/>
             <div class="row">
-                <div class="large-6 medium-6 columns">
-                    <label>Login</label>
-                    <input required name="login" type="text" placeholder="Login">
+                <div class="field">
+                    <input required name="login" type="text" placeholder="Usuario">
                 </div>
-                <div class="large-6 medium-6 columns">
-                    <label>Password</label>
+                <div class="field">
                     <input placeholder="Contrase&ntilde;a" name="contra" type="password" required>
                 </div>
             </div>
@@ -27,7 +30,7 @@
                     <label style="font-size:1px">A</label>
                 </div>
                 <div align="center" class="large-4 medium-4 columns">
-                    <input style="align-content:center" class="button" type="submit" name="submit" value="Editar" />
+                    <input style="align-content:center" class="button hover-button" type="submit" name="submit" value="Editar" />
                 </div>
                 <div class="large-4 medium-4 columns">
                     <label style="font-size:1px">A</label>
@@ -42,7 +45,7 @@
                 </div>
                 <div align="center" class="large-4 medium-4 columns">
                     <input type="hidden" value="${requestScope.idTerapeuta}" name="idTerapeuta"/>
-                    <input style="align-content:center" class="alert button" type="submit" name="submit" value="Eliminar" />
+                    <button class="icon delete" name="submit" value="Eliminar" type="submit" style="position: absolute; top: 94px; left: 75%"></button>
                 </div>
                 <div class="large-4 medium-4 columns">
                     <label style="font-size:1px">A</label>
