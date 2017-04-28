@@ -127,6 +127,355 @@
 			<input class="success button" type="submit" value="2" name="test" />
 			<input class="success button" type="submit" value="3" name="test" />
         </form>
-        
+         <form action="AgregarReceta" method="post">
+        	<input type="hidden" name="idTerapeuta" value="${requestScope.idTerapeuta}"/>
+             <input type="hidden" name="id" value="${requestScope.id}"/>
+            <table>
+                <tr>
+                    <td rowspan="38">
+                        Flor
+                    </td>
+                    <td>
+                        Agrimonia
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisAgrimonia" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Alamo Temblón
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisAlamoTemblon" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Haya
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisHaya" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Centaurea
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisCentaurea" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ceratostigma
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisCeratostigma" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Cerasifera
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisCerasifera" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Brote de Castaño
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisBroteDeCastano" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Achicoria
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisAchicoria" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Clemátide
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisClematide" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Manzano Silvestre
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisManzanoSilvestre" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Olmo
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisOlmo" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Genciana de Campo
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisGencianaDeCampo" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Aulaga
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisAulaga" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Brezo
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisBrezo" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Acebo
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisAcebo" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Madreselva
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisMadreselva" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hojarazo
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisHojarazo" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Impaciencia
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisImpaciencia" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Alerce
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisAlerce" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mimulo
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisMimulo" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mostaza
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisMostaza" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Roble
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisRoble" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Olivo
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisOlivo" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Pino
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisPino" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Castaño Rojo
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisCastanoRojo" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Heliantemo
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisHeliantemo" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Agua de Roca
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisAguaDeRoca" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Scleranthus
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisScleranthus" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Estrella de Belén
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisEstrellaDeBelen" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Castaño Dulce
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisCastanoDulce" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Verbena
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisVerbena" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Vid
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisVid" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Nogal
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisNogal" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Violeta de Agua
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisVioletadDeAgua" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Castaño Blanco
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisCastanoBlanco" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Avena Silvestre
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisAvenaSilvestre" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Rosa Silvestre
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisRosaSilvestre" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Sauce
+                    </td>
+                    <td>
+                        <input type="number" min="0" value="0" name="dosisSauce" placeholder="Cantidad en mililitros">ml
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Fecha de vencimiento
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="date" required name="vencimiento">
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" name="idPaciente" value="${requestScope.id}"/>
+            <input type="submit" name="submit" value="Hacer receta">
+        </form>
+        <br><br>
+        <table border="1">
+            <tr>
+                <th>Recetas</th>
+            </tr>
+            <c:set var="counter" value="1"/>
+            <c:forEach items="${requestScope.recetas}" var="al">
+                <tr>
+                	<td>
+                		${counter}
+                	</td>
+                    <td>
+                    	<form action="DescribirReceta" method="post">
+                            <input type="hidden" name="idPaciente" value="${requestScope.id}"/>
+                            <input  name="idReceta" value="${al.getIDReceta()}"/>
+                            <input type="submit" value="Flores" target="_blank"/>
+                        </form>
+                    </td>
+                    <td>
+                    	Fecha de vencimiento: ${al.getFecha_De_Vencimiento()}
+                    </td>
+                </tr>
+                <c:set var="counter" value="${counter+1}"/>
+            </c:forEach>
+        </table>
     </body>
 </html>

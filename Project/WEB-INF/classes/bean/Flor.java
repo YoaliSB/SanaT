@@ -4,7 +4,15 @@ public class Flor {
 	private int IDFlor;
 	private String NombreFlor;
 	private String DescripcionFlor;
+	private int Dosis;
 	private int cont;
+	
+	public int getDosis() {
+		return Dosis;
+	}
+	public void setDosis(int dosis) {
+		Dosis = dosis;
+	}
 	
 	public int getCont() {
 		return cont;

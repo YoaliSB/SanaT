@@ -18,12 +18,12 @@
                 </div>
                 <div class="row">
                     <div align="center" class="large-4 medium-4 columns login">
-                        <input id="password" placeholder="Password" name="password" type="password">
+                        <input id="password" placeholder="Contraseña" name="password" type="password">
                     </div>
                 </div>
                 <div class="row">
                     <div align="center" class="large-4 medium-4 columns login last">
-                        <input class="button hover-button" type="submit" name="submit" value="Iniciar sesión" />
+                        <input class="button" type="submit" name="submit" value="Iniciar sesión" />
                     </div>
                 </div>
                 <div class="row">
