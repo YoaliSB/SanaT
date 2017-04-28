@@ -13,7 +13,7 @@ import javax.servlet.annotation.WebServlet;
 public class AgregarPaciente extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response){
 
-		try{
+		try{ 
 
 			String base = getServletContext().getInitParameter("base");
 			String usuario = getServletContext().getInitParameter("usuario");

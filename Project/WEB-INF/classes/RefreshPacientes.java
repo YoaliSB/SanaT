@@ -1,4 +1,4 @@
-import java.io.*;
+import java.io.*;//
 import javax.servlet.*;
 import javax.servlet.http.*;
 
@@ -25,11 +25,11 @@ public class RefreshPacientes extends HttpServlet{
 
 			System.out.println(url);
 			Connection con = DriverManager.getConnection(url,usuario,password);
-			
+
 
 			Statement stat = con.createStatement();
 			int IDTerapeuta = Integer.parseInt(request.getParameter("idTerapeuta"));
-			
+
 			ResultSet resultSet=stat.executeQuery("SELECT * FROM paciente WHERE IDTerapeuta="+IDTerapeuta);
 			Vector<Paciente> pacientes = new Vector<Paciente>();
 

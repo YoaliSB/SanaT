@@ -42,6 +42,7 @@ public class Login extends HttpServlet {
 						Terapeuta aux = new Terapeuta();
 
 						aux.setNombreTerapeuta(resultSet.getString("NombreTerapeuta"));
+						aux.setIDTerapeuta(resultSet.getInt("IDTerapeuta"));
 
 						terapeutas.add(aux);
 
